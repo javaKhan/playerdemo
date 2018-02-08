@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/danmu/css/danmuplayer.css">
+    <link rel="stylesheet" href="static/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="static/danmu/js/jquery.min.js"></script>
+    <script src="static/danmu/js/danmuplayer.min.js"></script>
+    <title>Danmu player</title>
+</head>
+<body>
+    <div class="container">
+        <div id="danmup" style="margin-top: 50px;"></div>
+    </div>
+<script>
+   $().ready(function () {
+       console.info("qidong ")
+       var pp =  $("#danmup").DanmuPlayer({
+           src:"media/v02.mp4", //视频源
+           width:800,			//视频宽度
+           height:480,      	//视频高度
+           speed:20000,			//弹幕速度，这是数值指的是视频穿过672像素所需要的毫秒数
+           sumTime:65535,				//弹幕视频的总时间，可不填。
+           fontSizeSmall:16,			//小弹幕的字号
+           FontSizeBig:24,				//大弹幕的字号
+           opacity:"1",  			//弹幕默认透明度
+           topBottonDanmuTime:6000,  //底部及顶部弹幕存留的时间
+           urlToGetDanmu:"",     //用来接收弹幕信息的url  (稍后介绍)
+           urlToPostDanmu:"" ,   //用来存储弹幕信息的url  (稍后介绍)
+           maxCountInScreen: 1,   //屏幕上的最大的显示弹幕数目,弹幕数量过多时,优先加载最新的。
+           maxCountPerSec: 1      //每分秒秒钟最多的弹幕数目,弹幕数量过多时,优先加载最新的。
+       });
+       console.info(pp);
+       $("#danmup .danmu-div").danmu("addDanmu",[
+
+           {text:"这是滚动弹幕" ,color:"white",size:1,position:3,time:20,link:"http://www.baidu.com"}
+
+           ,{text:"这是顶部弹幕" ,color:"yellow" ,size:1,position:3,time:90,link:"http://www.imkzp.com"}
+
+           ,{text:"这是底部弹幕" , color:"red" ,size:1,position:3,time:150,link:"http://www."}
+
+       ])
+   })
+</script>
+</body>
+</html>

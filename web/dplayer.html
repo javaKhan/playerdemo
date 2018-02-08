@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>播放器Demo</title>
+    <link rel="stylesheet" href="static/player/DPlayer.min.css">
+    <link rel="stylesheet" href="static/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="static/bootstrap-3.3.7-dist/js/jquery-1.12.4.min.js"></script>
+    <script src="static/player/DPlayer.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="player"></div>
+    </div>
+<script>
+$(document).ready(function () {
+    console.info("启动");
+    var dp = new DPlayer({
+        container: document.getElementById('player'),
+        screenshot: true,
+        video: {
+            url: 'media/v02.mp4',
+            pic: 'media/v02.jpg',
+            thumbnails: 'media/v03.jpg'
+        },
+        subtitle: {
+            url: 'webvtt.vtt'
+        },
+        danmaku: {
+            id: 'demo',
+            api: 'https://api.prprpr.me/dplayer/'
+        }
+    });
+})
+</script>
+</body>
+</html>
