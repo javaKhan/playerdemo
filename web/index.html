@@ -10,34 +10,38 @@
 </head>
 <body>
     <div class="container">
+
+        <h3>十九大党章为何这样修改</h3>
+        <p style="color: red">在：（1:51）（2:29）（4:14）（12:10）（21:52）等添加信息，链接谁便加的，可以自行在输入框发信息，不用等时间</p>
         <div id="danmup" style="margin-top: 50px;"></div>
     </div>
 <script>
    $().ready(function () {
-       console.info("qidong ")
        var pp =  $("#danmup").DanmuPlayer({
-           src:"media/v02.mp4", //视频源
+           src:"media/video01.mp4", //视频源
            width:800,			//视频宽度
            height:480,      	//视频高度
            speed:20000,			//弹幕速度，这是数值指的是视频穿过672像素所需要的毫秒数
-           sumTime:65535,				//弹幕视频的总时间，可不填。
-           fontSizeSmall:16,			//小弹幕的字号
-           FontSizeBig:24,				//大弹幕的字号
            opacity:"1",  			//弹幕默认透明度
-           topBottonDanmuTime:6000,  //底部及顶部弹幕存留的时间
-           urlToGetDanmu:"",     //用来接收弹幕信息的url  (稍后介绍)
-           urlToPostDanmu:"" ,   //用来存储弹幕信息的url  (稍后介绍)
-           maxCountInScreen: 1,   //屏幕上的最大的显示弹幕数目,弹幕数量过多时,优先加载最新的。
-           maxCountPerSec: 1      //每分秒秒钟最多的弹幕数目,弹幕数量过多时,优先加载最新的。
+           topBottonDanmuTime:6000,  //底部及顶部内容存留的时间
+           urlToGetDanmu:"",     //用来接收信息的url  (稍后介绍)
+           urlToPostDanmu:"" ,   //用来存储信息的url  (稍后介绍)
        });
-       console.info(pp);
        $("#danmup .danmu-div").danmu("addDanmu",[
+           {text:"党章是党的根本大法," ,color:"white",size:1,position:3,time:111,link:"http://www.bjcc.gov.cn/"}
 
-           {text:"这是一个信息," ,color:"white",size:1,position:3,time:20,link:"http://www.bjcc.gov.cn/"}
+           ,{text:"学习党章、遵守党章、贯彻党章、维护党章是每一个共产党员的法定责任和义务。" ,color:"yellow" ,size:2,position:3,time:149,link:"http://www.imkzp.com"}
 
-           ,{text:"这是第二个信息" ,color:"yellow" ,size:1,position:3,time:90,link:"http://www.imkzp.com"}
+           ,{text:"中国特色社会主义进入新时代是一个过程" , color:"red" ,size:3,position:3,time:254,link:"http://www.baidu.com"}
+           ,{text:"中国特色社会主义进入新时代，我国社会主要矛盾已经转化为人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾" , color:"red" ,size:3,position:3,time:730,link:"http://www.baidu.com"}
+           ,{text:"伟大斗争、伟大工程、伟大事业、伟大梦想，这四者是紧密联系、相互贯通、相互作用的" , color:"red" ,size:3,position:3,time:1312,link:"http://www.baidu.com"}
+           ,{text:"历次党章内容简介" , color:"red" ,size:3,position:3,time:2333,link:"http://www.baidu.com"}
+           ,{text:"把习近平新时代中国特色社会主义思想写进党章，确立为党的指导思想" , color:"red" ,size:3,position:3,time:2798,link:"http://www.baidu.com"}
+           ,{text:"把中国特色社会主义文化同中国特色社会主义道路、中国特色社会主义理论体系、中国特色社会主义制度一道写入党章" , color:"red" ,size:3,position:3,time:3003,link:"http://www.baidu.com"}
+           ,{text:"对现阶段我国社会的主要矛盾作出新的表述。即人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾" , color:"red" ,size:3,position:3,time:3222,link:"http://www.baidu.com"}
+           ,{text:"在党的基本路线部分，增写了创新驱动发展战略、乡村振兴战略、区域协调发展战略、军民融合发展战略，以及充分发挥创新作为引领发展第一动力的作用，促进国民经济更高质量、更有效率、更加公平、更可持续发展" , color:"red" ,size:3,position:3,time:3320,link:"http://www.baidu.com"}
+           ,{text:"在坚持改革开放部分，增写了“要全面深化改革，完善和发展中国特色社会主义制度，推进国家治理体系和治理能力现代化”。把“增强改革措施的协调性”，改写为“更加注重改革的系统性、整体性、协同性”" , color:"red" ,size:3,position:3,time:3505,link:"http://www.baidu.com"}
 
-           ,{text:"这是第三个时间" , color:"red" ,size:1,position:3,time:150,link:"http://www.baidu.com"}
 
        ])
    })

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/danmu/css/danmuplayer.css">
+    <link rel="stylesheet" href="static/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="static/danmu/js/jquery.min.js"></script>
+    <script src="static/danmu/js/danmuplayer.min.js"></script>
+    <title>Danmu player</title>
+</head>
+<body>
+    <div class="container">
+        <h3>新思想：习近平新时代中国特色社会主义思想</h3>
+        <div id="danmup" style="margin-top: 50px;"></div>
+    </div>
+<script>
+   $().ready(function () {
+       var pp =  $("#danmup").DanmuPlayer({
+           src:"media/video02.mp4", //视频源
+           width:800,			//视频宽度
+           height:480,      	//视频高度
+           topBottonDanmuTime:6000,  //底部及顶部内容存留的时间
+           urlToGetDanmu:"",     //用来接收信息的url  (稍后介绍)
+           urlToPostDanmu:"" ,   //用来存储信息的url  (稍后介绍)
+       });
+       $("#danmup .danmu-div").danmu("addDanmu",[
+
+           {text:"党章是党的根本大法," ,color:"white",size:1,position:3,time:20,link:"http://www.bjcc.gov.cn/"}
+
+           ,{text:"学习党章、遵守党章、贯彻党章、维护党章是每一个共产党员的法定责任和义务。" ,color:"yellow" ,size:2,position:3,time:90,link:"http://www.imkzp.com"}
+
+           ,{text:"中国特色社会主义进入新时代是一个过程" , color:"red" ,size:3,position:3,time:150,link:"http://www.baidu.com"}
+           ,{text:"中国特色社会主义进入新时代，我国社会主要矛盾已经转化为人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾" , color:"red" ,size:3,position:3,time:150,link:"http://www.baidu.com"}
+           ,{text:"伟大斗争、伟大工程、伟大事业、伟大梦想，这四者是紧密联系、相互贯通、相互作用的" , color:"red" ,size:3,position:3,time:150,link:"http://www.baidu.com"}
+           ,{text:"历次党章内容简介" , color:"red" ,size:3,position:3,time:150,link:"http://www.baidu.com"}
+           ,{text:"把习近平新时代中国特色社会主义思想写进党章，确立为党的指导思想" , color:"red" ,size:3,position:3,time:150,link:"http://www.baidu.com"}
+           ,{text:"把中国特色社会主义文化同中国特色社会主义道路、中国特色社会主义理论体系、中国特色社会主义制度一道写入党章" , color:"red" ,size:3,position:3,time:150,link:"http://www.baidu.com"}
+           ,{text:"对现阶段我国社会的主要矛盾作出新的表述。即人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾" , color:"red" ,size:3,position:3,time:150,link:"http://www.baidu.com"}
+           ,{text:"在党的基本路线部分，增写了创新驱动发展战略、乡村振兴战略、区域协调发展战略、军民融合发展战略，以及充分发挥创新作为引领发展第一动力的作用，促进国民经济更高质量、更有效率、更加公平、更可持续发展" , color:"red" ,size:3,position:3,time:150,link:"http://www.baidu.com"}
+           ,{text:"在坚持改革开放部分，增写了“要全面深化改革，完善和发展中国特色社会主义制度，推进国家治理体系和治理能力现代化”。把“增强改革措施的协调性”，改写为“更加注重改革的系统性、整体性、协同性”" , color:"red" ,size:3,position:3,time:150,link:"http://www.baidu.com"}
+
+       ])
+   })
+</script>
+</body>
+</html>

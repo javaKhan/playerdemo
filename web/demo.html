@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/danmu/css/danmuplayer.css">
+    <link rel="stylesheet" href="static/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="static/danmu/js/jquery.min.js"></script>
+    <script src="static/danmu/js/danmuplayer.min.js"></script>
+    <title>Danmu player</title>
+</head>
+<body>
+    <div class="container">
+        <div id="danmup" style="margin-top: 50px;"></div>
+    </div>
+<script>
+   $().ready(function () {
+       var pp =  $("#danmup").DanmuPlayer({
+           src:"media/v02.mp4", //视频源
+           width:800,			//视频宽度
+           height:480,      	//视频高度
+           speed:20000,			//弹幕速度，这是数值指的是视频穿过672像素所需要的毫秒数
+           opacity:"1",  			//弹幕默认透明度
+           topBottonDanmuTime:6000,  //底部及顶部内容存留的时间
+           urlToGetDanmu:"",     //用来接收信息的url  (稍后介绍)
+           urlToPostDanmu:"" ,   //用来存储信息的url  (稍后介绍)
+       });
+       $("#danmup .danmu-div").danmu("addDanmu",[
+
+           {text:"这是一个信息," ,color:"white",size:1,position:3,time:20,link:"http://www.bjcc.gov.cn/"}
+
+           ,{text:"这是第二个信息" ,color:"yellow" ,size:1,position:3,time:90,link:"http://www.imkzp.com"}
+
+           ,{text:"这是第三个时间" , color:"red" ,size:1,position:3,time:150,link:"http://www.baidu.com"}
+
+       ])
+   })
+</script>
+</body>
+</html>
